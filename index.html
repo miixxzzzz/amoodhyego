@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#190517" />
+  <title>Para Dhyego ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="welcome" id="welcome" aria-label="Início da surpresa">
+    <div class="welcome-glow" aria-hidden="true"></div>
+    <p>uma surpresa feita para</p>
+    <h1>Dhyego<span>.</span></h1>
+    <button id="startButton" type="button">Entrar na surpresa <b>♥</b></button>
+    <a class="welcome-time-link" id="timeLink" href="#nosso-tempo">ver nosso tempo <span>↓</span></a>
+    <small>toque para começar com música</small>
+  </section>
+  <div class="background" aria-hidden="true"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="stars" id="stars"></div></div>
+  <main>
+    <section class="hero" id="inicio">
+      <p class="overline">UMA CARTA EM FORMA DE CORAÇÃO</p>
+      <div class="heart-stage" id="heartStage" role="button" tabindex="0" aria-label="Toque no coração para espalhar amor">
+        <div class="heart-aura" aria-hidden="true"></div><div class="heart-words" id="heartWords" aria-hidden="true"></div>
+        <div class="heart-core" aria-hidden="true"><span>para</span><b>Dhyego</b></div>
+      </div>
+      <p class="hero-copy">Para a pessoa que faz meu coração<br />bater diferente, todos os dias.</p>
+      <a class="discover" href="#carta">clique aqui, Amor <span>♡</span></a><span class="scroll-note">deslize para descobrir</span>
+    </section>
+    <section class="letter-section" id="carta">
+      <div class="section-label" data-reveal><span>01</span> UMA PEQUENA DECLARAÇÃO</div>
+      <article class="letter-card" data-reveal><span class="quote-mark">“</span><p id="letterText" data-message="Dhyego, talvez eu nunca consiga colocar em palavras tudo o que sinto por você. Mas eu queria criar um pequeno cantinho que lembrasse, sempre, o quanto você é especial para mim."></p><div class="signature">com todo meu amor <i>♡</i></div></article>
+    </section>
+    <section class="time-section" id="nosso-tempo" aria-labelledby="timeTitle">
+      <div class="section-label" data-reveal><span>02</span> DESDE QUE A GENTE SE CONHECEU</div>
+      <div class="time-card" data-reveal>
+        <p class="time-kicker">22 • 06 • 2026</p>
+        <h2 id="timeTitle">O nosso tempo<span>.</span></h2>
+        <p class="time-intro">Cada instante desde aquele dia tem um lugar especial aqui.</p>
+        <div class="time-counter" aria-live="polite" aria-label="Tempo desde 22 de junho de 2026">
+          <div><b id="monthsCount">0</b><span>meses</span></div>
+          <div><b id="daysCount">0</b><span>dias</span></div>
+          <div><b id="hoursCount">0</b><span>horas</span></div>
+          <div><b id="minutesCount">0</b><span>minutos</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="player-section" aria-labelledby="song-title">
+      <div class="section-label" data-reveal><span>03</span> A NOSSA TRILHA SONORA JUNTOS</div>
+      <div class="player" data-reveal>
+        <div class="disc" id="disc"><span>♡</span></div>
+        <div class="track-info"><p class="track-kicker">UMA MÚSICA PARA NÓS</p><h2 id="song-title">right here <span>— Lil Peep feat. Horse Head</span></h2><div class="timeline"><span id="currentTime">0:00</span><input id="progress" type="range" min="0" max="100" value="0" aria-label="Progresso da música" /><span id="duration">0:00</span></div><div class="now-playing"><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i></span><span>tocando agora</span><b id="nowPlaying">o começo da nossa música</b></div></div>
+        <div class="player-controls"><button class="icon-button primary" id="playButton" type="button" aria-label="Tocar música"><span id="playIcon">▶</span></button><label class="volume" aria-label="Volume"><span>♩</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.7" /></label></div>
+      </div>
+      <div class="translation-card" data-reveal aria-live="polite">
+        <div class="translation-label"><span class="pulse-dot" aria-hidden="true"></span> TRADUÇÃO DO TRECHO ATUAL <span id="lyricMoment">MOMENTO 01</span></div>
+        <p id="translationLine">Dê play — cada momento da música vai aparecer aqui.</p>
+        <div class="lyric-cues" id="lyricCues" aria-label="Partes da música"><span data-cue="0">pensamentos</span><span data-cue="1">saudade</span><span data-cue="2">escolha</span><span data-cue="3">memórias</span><span data-cue="4">bem aqui</span><span data-cue="5">carinho</span><span data-cue="6">conexão</span></div>
+        <div class="translation-count"><span id="translationTime">0:00</span><span>right here</span></div>
+      </div>
+      <p class="music-help" id="musicHelp" data-reveal>Toque em play para começar nossa música.</p>
+      <audio id="music" preload="metadata"><source src="assets/music/right-here-lil-peep.mp3" type="audio/mpeg" /></audio>
+    </section>
+    <section class="comfort-section" data-reveal>
+      <p>para os dias em que você precisar lembrar</p>
+      <button id="openLetter" type="button">Leia quando estiver triste <span>♥</span></button>
+      <button class="memory-button" id="openMissingLetter" type="button">Cartinha aberta, para Dhyego <span>♡</span></button>
+    </section>
+    <section class="promise-section"><div class="tiny-heart" aria-hidden="true">♥</div><p data-reveal>Eu escolheria você<br />em todas as versões<br />da minha vida.</p><h2 data-reveal>Dhyego<span>.</span></h2><a class="back-top" href="#inicio">voltar ao começo ↑</a></section>
+  </main>
+  <section class="letter-modal" id="letterModal" aria-hidden="true" aria-labelledby="modalTitle" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-heading"><span>♥ Dhyego</span><button id="closeLetter" type="button" aria-label="Fechar carta">×</button></div>
+      <div class="modal-scroll">
+        <p class="modal-label">SE ESTIVER TRISTE, LEIA ISSO</p>
+        <h2 id="modalTitle">Meu amor,</h2>
+        <p>OIII MEUU AMOOORR, eu seii que você tá tristinho agoraa meu escrevii isso aqui, pra quando estiver triste ler e ver o quanto eu amo você meu nenem, lembra que eu sempre vou amar seu carinho, quando voce mexe no meu cabeloo ou quando pega na minha cintura bb e se lembre também que você pode contar cmg pra tudo, tudinho msm, até das pequenas coisas até as grandes e eu já te disse mais de 3 vezes o quantooo eu me importo com voceee bebee, você me deixa muitooo felizzz e eu te amooo muitoooo, e imagina eu ai do seu ladinho, te abraçando e lembra tbm que pode chorar do meu lado semm preocupação tabom???</p>
+      </div>
+      <button class="close-wide" id="closeLetterWide" type="button">Fechar carta ♥</button>
+    </div>
+  </section>
+  <section class="letter-modal" id="missingLetterModal" aria-hidden="true" aria-labelledby="missingModalTitle" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-heading"><span>♡ Dhyego</span><button id="closeMissingLetter" type="button" aria-label="Fechar carta">×</button></div>
+      <div class="modal-scroll">
+        <p class="modal-label">CARTINHA ABERTA, PARA DHYEGO</p>
+        <h2 id="missingModalTitle">Meu amor,</h2>
+        <p>meu amorr, eu amo muito você, muitao, as vezes a gente pode até brigar e se desentender mais uma coisa que eu amo dms, é estar ao seu lado xuxuu, e quando você fala aqls coisas esquisitas e a gente fica dando risadas por ngc besta é taoooo divertido que eu gosto muito, kskskskaks, e também quando a gente ta juntinho, se abraçando muito, e quando estamos juntos na tutoria eu gostooo muitooo, qria poder te ver sem ser na escola né mais ok. mas lembre-se que eu amo todos os nossos momentos juntoooss demais, te amo ♡</p>
+      </div>
+      <button class="close-wide" id="closeMissingLetterWide" type="button">Fechar carta ♡</button>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
